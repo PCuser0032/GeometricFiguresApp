@@ -4,6 +4,7 @@
     {
         public string? Name { get; set; }
         public abstract double GetArea();
+        public abstract double GetPerimeter();
         public string GetName()
         {
             return Name;
@@ -18,17 +19,9 @@
             return Math.PI * Math.Pow(Radius, 2.0);
         }
 
-        public double GetCircleLength()
+        public override double GetPerimeter()
         {
             return 2.0 * Math.PI * Radius;
-        }
-
-        public void GetInfo()
-        {
-            Console.WriteLine($"Имя фигруры: { GetName() }");
-            Console.WriteLine($"Длина окружности: { GetCircleLength }");
-            Console.WriteLine($"Площадь: { GetArea() }");
-            Console.WriteLine($"Радиус: R = { Radius }");
         }
     }
 
